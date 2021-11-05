@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Volkhov&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Charm|Volkhov&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+
+*,*::before, *::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+body{
+  background: #D9D9D9;
+  font-family: 'Volkhov', serif, Arial, Helvetica, sans-serif; 
+  height: 100vh;
+  /* overflow-x: hidden; */
+}
