@@ -2,7 +2,7 @@ import React, { useContext, useState, useRef, useEffect } from 'react';
 import { AppContext } from "../AppContext";
 import { MenuCategoryData } from "./MenuContext";
 import { makeStyles } from "@material-ui/core/styles";
-import { FaListUl, FaWarehouse, FaWindowClose, FaShoppingCart } from "react-icons/fa"
+import { FaListUl, FaWarehouse, FaWindowClose, FaShoppingCart,FaGithub } from "react-icons/fa"
 
 
 const singleNav1 = {
@@ -77,6 +77,11 @@ const useStyles = makeStyles(theme => ({
         background: "#376037",
         borderRadius: "50%",
         alignSelf: "center",
+    },
+    githublogo:{
+        alignSelf: "center",
+        paddingLeft:".3rem",
+        cursor:"pointer"
     },
     jiangnan: {
         color: "#376037",
@@ -352,6 +357,10 @@ const Nav = () => {
         }
     }, []);
 
+    const handleGithubClick = () => {
+        window.location.href = "https://github.com/zenlink/Restaurant"
+    }
+
     return (
         <div ref={navTrack} className={state.isScrollTop ? classes.navContainer : `${classes.navContainer} ${classes.showBackground}`} >
             <div className={classes.nav}>
@@ -367,6 +376,7 @@ const Nav = () => {
                         <div className={classes.jiangnan}>{state.navArr[0]}</div>
                         <div className={classes.restaurant}>Restaurant</div>
                     </div>
+                    <div className ={classes.githublogo}><FaGithub onClick={handleGithubClick}/></div>
                 </div>
 
                 <div className={btnOpen ? `${classes.otherContainer} ${classes.showOtherContainer}` : classes.otherContainer}>
